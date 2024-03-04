@@ -37,10 +37,10 @@
 
 <body class="body-piling">
     <div class="wrapper">
-       
+
         <!-- Preloader -->
         <div class="preloader"></div>
-        
+
         <header id="header" class="header">
             <div class="container-fluid">
                 <div class="brand">
@@ -49,6 +49,13 @@
                 <div class="lets-chat">
                     <span>Let's Chat</span>
                     <button><i class="fab fa-rocketchat" style="color: #1D2043;"></i></button>
+                </div>
+                <!-- Toggle Switch for Theme -->
+                <div class="toggle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
                 <button class="nav-toggle-btn a-nav-toggle">
                     <span class="hamburger">
@@ -119,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--====== Jquery ======-->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!--====== Bootstrap ======-->
@@ -138,6 +145,20 @@
     <script src="assets/js/typed.min.js"></script>
     <!--====== Main JS ======-->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Toggle Switch for Dark/Light Theme
+        const themeToggle = document.getElementById('theme-toggle');
+
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                // Switched to Dark Theme
+                window.location.href = 'index-dark.html';
+            } else {
+                // Switched to Light Theme
+                window.location.href = 'index-light.html';
+            }
+        });
+    </script>
 </body>
 
 </html>
