@@ -31,6 +31,67 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        </style>
 </head>
 
 <body class="body-piling dark-body">
@@ -88,6 +149,11 @@
                                     <li>Call me <a href="callto:(+977)9860752300">(+977) 9860752300</a></li>
                                     <li><a href="mailto:manishkarki787@gmail.com">hello_manishkarki787@gmail.com</a></li>
                                 </ul>
+                                <p>Light</p>
+                                <label class="switch">
+                                    <input type="checkbox" id="theme-toggle-dark" checked>
+                                    <span class="slider round"></span>
+                                </label>
                                 <a href="#Contact" class="download-cv">Download CV <i class="fas fa-download"></i></a>
                             </div>
                             <div class="flex flex-wrap items-center -mxa-15">
@@ -135,7 +201,7 @@
                                 <div class="lg:grow-0 lg:shrink-0 basisa-41 pxa-15">
                                     <div class="service-content pt-100 rpt-55 animate-element delay5 fadeInUp">
                                         <div class="section-title mb-25">
-                                            <h2 class="slide-title animate-element delay5 fadeInUp">What <span class="text-typed a-typed a-typed-services" data-text="Services"></span> I provde to my clients in here.</h2>
+                                            <h2 class="slide-title animate-element delay5 fadeInUp">What <span class="text-typed a-typed a-typed-services" data-text="Services"></span> I provide to my clients in here.</h2>
                                         </div>
                                         <p class="animate-element delay6 fadeInUp">I always want to be able to meet the goals of my clients, I value my services as a Developer through my work. You may like my <b>services.</b></p>
                                         <div class="our-services animate-element delay8 fadeInUp">
@@ -173,65 +239,65 @@
                 <div class="section pp-scrollable slide slide-skills a-slide-typed" data-name="skills">
                     <div class="slide-container">
                         <div class="container">
-                           <div class="flex flex-wrap items-center -mxa-15">
-                                <div class="lg:grow-0 lg:shrink-0 basisa-41 pxa-15">
-                                    <div class="skill-content animate-element delay5 fadeInUp">
-                                        <div class="section-title mb-25">
-                                            <span class="sub-title mb-45">Skills</span>
-                                            <h2 class="slide-title animate-element delay5 fadeInUp">As a Designer i am good at fit with few <span class="text-typed a-typed a-typed-skills" data-text="skills."></span></h2>
-                                        </div>
-                                        <p class="animate-element delay6 fadeInUp">All desigener have good skills to make sure satisfied their clints, As a designer I am also specialised few <b>skills.</b></p>
-                                        <div class="bar-list a-progressbar pt-5 animate-element delay9 fadeInUp">
-                                            <div class="bar-item">
-                                                <div class="flex flex-wrap -mxa-15">
-                                                    <div class="basis-0 grow bar-item-title pxa-15">App Design</div>
-                                                    <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">78%</div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar flex flex-col justify-center" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="bar-item">
-                                                <div class="flex flex-wrap -mxa-15">
-                                                    <div class="basis-0 grow bar-item-title pxa-15">Web Design</div>
-                                                    <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">95%</div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="bar-item">
-                                                <div class="flex flex-wrap -mxa-15">
-                                                    <div class="basis-0 grow bar-item-title pxa-15">Art & illustration</div>
-                                                    <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">65%</div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="bar-item">
-                                                <div class="flex flex-wrap -mxa-15">
-                                                    <div class="basis-0 grow bar-item-title pxa-15">Banding</div>
-                                                    <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">85%</div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lg:grow-0 lg:shrink-0 basisa-58 pxa-15 w-full">
-                                    <div class="skill-image pt-55 lg:text-right animate-element delay4 fadeInUp">
-                                        <div class="skill-images-inner">
-                                            <img src="assets/images/skills/skills-dark.png" alt="Skills">
-                                            <img class="shape-one animate-element delay6 bounceIn" src="assets/images/skills/shape-one.png" alt="shape">
-                                            <img class="shape-two animate-element delay8 bounceIn" src="assets/images/skills/shape-two-dark.png" alt="shape">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <div class="flex flex-wrap items-center -mxa-15">
+                                 <div class="lg:grow-0 lg:shrink-0 basisa-41 pxa-15">
+                                     <div class="skill-content animate-element delay5 fadeInUp">
+                                         <div class="section-title mb-25">
+                                             <span class="sub-title mb-45">Skills</span>
+                                             <h2 class="slide-title animate-element delay5 fadeInUp">As a Developer I am good and fit with few <span class="text-typed a-typed a-typed-skills" data-text="skills."></span></h2>
+                                         </div>
+                                         <p class="animate-element delay6 fadeInUp">All developers have good skills to make sure their clients is satisfied with the work, As a developer I am also specialised few <b>skills.</b></p>
+                                         <div class="bar-list a-progressbar pt-5 animate-element delay9 fadeInUp">
+                                             <div class="bar-item">
+                                                 <div class="flex flex-wrap -mxa-15">
+                                                     <div class="basis-0 grow bar-item-title pxa-15">Wordpress Developer</div>
+                                                     <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">85%</div>
+                                                 </div>
+                                                 <div class="progress">
+                                                     <div class="progress-bar flex flex-col justify-center" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                 </div>
+                                             </div>
+                                             <div class="bar-item">
+                                                 <div class="flex flex-wrap -mxa-15">
+                                                     <div class="basis-0 grow bar-item-title pxa-15">Web Design</div>
+                                                     <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">95%</div>
+                                                 </div>
+                                                 <div class="progress">
+                                                     <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                 </div>
+                                             </div>
+                                             <div class="bar-item">
+                                                 <div class="flex flex-wrap -mxa-15">
+                                                     <div class="basis-0 grow bar-item-title pxa-15">Web Development</div>
+                                                     <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">75%</div>
+                                                 </div>
+                                                 <div class="progress">
+                                                     <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                 </div>
+                                             </div>
+                                             <div class="bar-item">
+                                                 <div class="flex flex-wrap -mxa-15">
+                                                     <div class="basis-0 grow bar-item-title pxa-15">SEO(Content Writing)</div>
+                                                     <div class="grow-0 shrink-0 basis-auto w-auto text-right bar-item-value pxa-15">90%</div>
+                                                 </div>
+                                                 <div class="progress">
+                                                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="lg:grow-0 lg:shrink-0 basisa-58 pxa-15 w-full">
+                                     <div class="skill-image pt-55 lg:text-right animate-element delay4 fadeInUp">
+                                         <div class="skill-images-inner">
+                                             <img src="assets/images/skills/skills.png" alt="Skills">
+                                             <img class="shape-one animate-element delay6 bounceIn" src="assets/images/skills/shape-one.png" alt="shape">
+                                             <img class="shape-two animate-element delay8 bounceIn" src="assets/images/skills/shape-two.png" alt="shape">
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
                     </div>
                 </div>
                 <div class="section pp-scrollable slide slide-resume slide-light">
@@ -246,21 +312,20 @@
                                         </div>
                                         <div class="edu-experi-wrap">
                                             <div class="edu-experi-item animate-element delay5 fadeInUp">
-                                                <span class="years">2010-2014</span>
+                                                <span class="years">2019-2023</span>
                                                 <div class="vacancy-content">
-                                                    <span class="title">BSC</span>
-                                                    <h4 class="subject">Computer Science</h4>
-                                                    <h6 class="institution">South University Of Bangladesh</h6>
-                                                    <p>Major in UI Design, UX Design, Interaction Design,  User Empathy, Branding.</p>
+                                                    <span class="title">BCA</span>
+                                                    <h4 class="subject">Computer Application</h4>
+                                                    <h6 class="institution">Purbhanchal University(PU)</h6>
+                                                    <p>Major in Web-Development, Wordpress Website Development, Digital Marketing(SEO),  Content Writing, Branding.</p>
                                                 </div>
                                             </div>
                                             <div class="edu-experi-item animate-element delay8 fadeInUp">
-                                                <span class="years">2014-2016</span>
+                                                <span class="years">2017-2019</span>
                                                 <div class="vacancy-content">
-                                                    <span class="title">MSC</span>
-                                                    <h4 class="subject">Computer Science</h4>
-                                                    <h6 class="institution">Defodil University of Bangladesh</h6>
-                                                    <p>Product Design, Information Architecture, Understanding the product, Product Analyses, Market Reserach, Communication.</p>
+                                                    <span class="title">10 +2</span>
+                                                    <h4 class="subject ">Computer Science</h4>
+                                                    <h6 class="institution">Cambridge High School</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,19 +339,19 @@
                                         </div>
                                         <div class="edu-experi-wrap">
                                             <div class="edu-experi-item beahance animate-element delay7 fadeInUp">
-                                                <span class="years">2016-2018</span>
+                                                <span class="years">2016-2019</span>
                                                 <div class="vacancy-content">
-                                                    <span class="title">Beahance</span>
-                                                    <h4 class="subject">Uniq Web Design</h4>
-                                                    <p>After finishing my studies, I first concentrated on my work in <a href="https://www.behance.net">Behance</a>, here I worked as a web designer for 2 years. It was really a big experience for me.</p>
+                                                    <span class="title">Wexabyte</span>
+                                                    <h4 class="subject">SEO(Wordpress Web Design, content wtiting)</h4>
+                                                    <p>After finishing my studies, I first concentrated on my work in <a href="https://www.wexabyte.com">Wexabyte</a>, here I worked as a web designer and SEO content writer for 3 years. It was really a big experience for me.</p>
                                                 </div>
                                             </div>
                                             <div class="edu-experi-item dribbble animate-element delay10 fadeInUp">
-                                                <span class="years">2018-2020</span>
+                                                <span class="years">2023-Present</span>
                                                 <div class="vacancy-content">
-                                                    <span class="title">Dribbble</span>
-                                                    <h4 class="subject">Product Designer</h4>
-                                                    <p>After working well for two years at <a href="https://dribbble.com">dribbble</a>, I got the opportunity to work in one of the best market dribbles in the world, and there I am now working as a podcast designer.</p>
+                                                    <span class="title">Bibhuti Solutions</span>
+                                                    <h4 class="subject">Front End Developer(Intern)</h4>
+                                                    <p>By working here at <a href="https://dribbble.com">Bibhuti</a>, I got the opportunity to work in real world projects, and I am still working as a Front End Developer.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -306,18 +371,18 @@
                                             <span class="sub-title m-b45a animate-element delay5 fadeInUp">Portfolio</span>
                                             <h2 class="slide-title animate-element delay6 fadeInUp">Some of my Creative <span class="text-typed a-typed a-typed-portfolio" data-text="Works."></span></h2>
                                         </div>
-                                        <p class="animate-element delay7 fadeInUp">As a designer I have been working few years in this sector, and i have complted lot's of project <b><a href="#">see here.</a></b></p>
+                                        <p class="animate-element delay7 fadeInUp">As a Web-Developer I have been working few years in this sector, and I have completed lot's of project <b><a href="#">see here.</a></b></p>
                                         <a href="blog.html" class="read-more mt-45 rmt-25 animate-element delay8 fadeInUp">Explore More <i class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
                                 <div class="col-xl-5 lg:grow-0 lg:shrink-0 basisa-41 pxa-15">
                                     <div class="counter-wrap rmb-15 animate-element delay9 fadeInUp">
                                         <div class="success-box">
-                                            <span class="count-text lass-than-ten" data-speed="3000" data-stop="7">0</span>
+                                            <span class="count-text lass-than-ten" data-speed="3000" data-stop="7">2</span>
                                             <h6>Years of Experience</h6>
                                         </div>
                                         <div class="success-box">
-                                            <span class="count-text plus" data-speed="3000" data-stop="120">0</span>
+                                            <span class="count-text plus" data-speed="3000" data-stop="120">13</span>
                                             <h6>Satisfied Clients</h6>
                                         </div>
                                     </div>
@@ -542,6 +607,21 @@
     <script src="assets/js/typed.min.js"></script>
     <!--====== Main JS ======-->
     <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get the theme toggle switch
+    var themeToggleDark = document.getElementById('theme-toggle-dark');
+
+    // Add event listener for theme toggle switch
+    themeToggleDark.addEventListener('change', function() {
+        if (!this.checked) {
+            // If switch is off, redirect to index.html
+            window.location.href = 'index.html';
+        }
+    });
+});
+
+    </script>
 </body>
 
 </html>
